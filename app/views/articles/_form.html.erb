@@ -1,0 +1,19 @@
+<%= simple_form_for @article do |f| %>
+  <div class="form-inputs">
+    <%= f.input :title, placeholder: "Rentrez un titre"%>
+    <%= f.input :subtitle, placeholder: "Rentrez un sous-titre"%>
+    <%#= f.input :photo %>
+    <%#= f.input :photo_cache, as: :hidden %>
+  <!--   <div id='form-paragraphs'> -->
+      <%#= f.simple_fields_for :paragraphs do |para| %>
+        <%#= render 'paragraph_fields', :f => para %>
+      <%# end %>
+<!--       <div class='form-links'> -->
+        <%#= link_to_add_association 'add para', f, :paragraphs %>
+<!--       </div> -->
+    <!-- </div> -->
+  </div>
+  <div class="form-actions">
+    <%= f.button :submit, class: "btn btn-primary"%>
+  </div>
+<% end %>
