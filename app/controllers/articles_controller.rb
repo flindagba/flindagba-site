@@ -40,6 +40,6 @@ class ArticlesController < ApplicationController
   private
 
     def article_params
-     params.require(:article).permit(:title, :subtitle)
+     params.require(:article).permit(:title, :subtitle, paragraphs_attributes: [:id, :content, :_destroy])
     end
 end
