@@ -1,58 +1,40 @@
-<div class="navbar-wagon">
+<div class="navbar-container">
   <!-- Logo -->
-  <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo.png", height: 50 %>
-  <% end %>
-
-  <!-- Right Navigation -->
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
-
-    <% if user_signed_in? %>
-
-      <!-- Links when logged in -->
-      <%= link_to "Host", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Trips", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-
-      <!-- Avatar with dropdown menu -->
-      <div class="navbar-wagon-item">
-        <div class="dropdown">
-          <%= image_tag "http://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-            <li>
-              <%= link_to "#" do %>
-                <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to "#" do %>
-                <i class="fa fa-cog"></i>  <%= t(".settings", default: "Settings") %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
-              <% end %>
-            </li>
-          </ul>
-        </div>
-      </div>
-    <% else %>
-      <!-- Login link (when logged out) -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+  <div class="navbar-brand-container">
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <%= image_tag "aigle.png", height: 100 %>
     <% end %>
   </div>
+  <div class="navbar-description">
 
-  <!-- Dropdown list appearing on mobile only -->
-  <div class="navbar-wagon-item hidden-md hidden-lg">
-    <div class="dropdown">
-      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
-      </ul>
+    <div class="navbar-title">
+      <h1>Maître F. LINDAGBA MBA</h1>
     </div>
+
+    <div class="navbar-description-right">
+
+      <div class="navbar-contact">
+        <div class="navbar-contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>116 Cours Aristide Briand, 33000 Bordeaux <br> 22 Avenue de Bordeaux, 33560 Carbon-Blanc</p>
+        </div>
+        <div class="navbar-contact-item">
+          <i class="fas fa-mobile-alt"></i>
+          <p>Bordeaux : 05 56 31 44 65 <br> Carbon-Blanc :  05 57 30 86 04</p>
+        </div>
+        <div class="navbar-contact-item">
+          <i class="far fa-envelope"></i>
+          <p>lindagba.mba.avocat@gmail.com</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="navbar-description-link">
+    <%= link_to "ACCUEIL", root_path, class: "navbar-item navbar-link" %>
+    <%= link_to "DOMAINES D'EXPERTISE", domaines_expertise_path, class: "navbar-item navbar-link" %>
+    <%= link_to "ARTICLES", articles_path, class: "navbar-item navbar-link" %>
+    <%= link_to "CONTACT", contact_path, class: "navbar-item navbar-link" %>
   </div>
 </div>
 
