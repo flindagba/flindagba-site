@@ -1,1 +1,72 @@
-// Specific CSS for your home-page
+.accueil-container {
+  max-width: 1440px;
+  padding:0;
+  margin: auto;
+}
+
+.accueil-photo {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  height:500px;
+}
+
+.accueil-description {
+  padding-bottom: 50px;
+  .accueil-description-content {
+    width:700px;
+    margin:auto;
+    text-align: center;
+  }
+  p {
+    font-size: 15px;
+  }
+}
+
+.accueil-description-title {
+  text-align: center;
+  margin-top: 70px;
+  position: relative;
+  h2 {
+    color: $main-color;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0;
+  }
+  h3 {
+    color: $main-gray;
+    font-size: 22px;
+    margin: 5px 0 50px 0;
+    padding-bottom: 30px;
+  }
+  &:before {
+    content : "";
+    position: absolute;
+    left    : 42.5%;
+    bottom  : 0;
+    height  : 1px;
+    width   : 15%;
+    border-bottom: 3px solid $main-color;
+  }
+}
+
+.accueil-droit {
+  background-color: $white;
+  text-align:center;
+  margin: 0 auto 0 auto;
+}
+
+.accueil-droit-content {
+  background-color: $light-gray;
+  margin: 40px;
+  border: 2px solid #dddddd;
+  h3 {
+    margin-top: 40px;
+    color: $main-gray;
+    font-size: 22px;
+  }
+  p {
+    padding: 20px;
+    font-size: 15px;
+  }
+}
