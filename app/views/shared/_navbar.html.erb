@@ -30,11 +30,11 @@
     </div>
 
   </div>
-  <div class="navbar-description-link">
-    <%= link_to "ACCUEIL", root_path, class: "navbar-item navbar-link" %>
-    <%= link_to "DOMAINES D'EXPERTISE", domaines_expertise_path, class: "navbar-item navbar-link" %>
-    <%= link_to "ARTICLES", articles_path, class: "navbar-item navbar-link" %>
-    <%= link_to "CONTACT", contact_path, class: "navbar-item navbar-link" %>
+  <div class="navbar-description-link navbar-item navbar-link">
+    <%= link_to "ACCUEIL", root_path, class: current_class?(root_path) %>
+    <%= link_to "DOMAINES D'EXPERTISE", domaines_expertise_path, class: current_class?(domaines_expertise_path) %>
+    <%= link_to "ARTICLES", articles_path, class: current_class?(articles_path)  %>
+    <%= link_to "CONTACT", contact_path, class: current_class?(contact_path)%>
   </div>
 </div>
 

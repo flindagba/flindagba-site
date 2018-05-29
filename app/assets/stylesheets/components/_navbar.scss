@@ -95,12 +95,14 @@
 
 /* Navbar link */
 .navbar-link {
-  color: #616668;
-  font-size: 20px;
-}
-.navbar-link:hover {
-  color: $main-color;
-  text-decoration: none;
+  a {
+    color: #616668;
+    font-size: 20px;
+    &:hover {
+      color: $main-color;
+      text-decoration: none;
+    }
+  }
 }
 
 /* Dropdown menu */
@@ -132,4 +134,8 @@
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+}
+
+.active {
+  color: $main-color !important;
 }
