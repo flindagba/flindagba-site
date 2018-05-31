@@ -1,0 +1,22 @@
+<div class="article-photo" style="background-image: url(<%= article.photo %>)">
+</div>
+<div class="article-content">
+  <div class="article-admin">
+  <h2><%= article.title %></h2>
+  <%# if user_signed_in? %>
+    <%= link_to edit_article_path(article) do %>
+      <i class="far fa-edit"></i>
+    <% end %>
+    <%= link_to article_path(article), method: :delete, data: {:confirm => "T'es sur de vouloir supprimer ça ? Vraiment ?" } do %>
+      <i class="fa fa-times" aria-hidden="true"></i>
+    <% end %>
+  </div>
+  <%# end %>
+  <div class="article-subtitle">
+    <h4><%= article.subtitle %></h4>
+    <p>ajouté le <%= article.created_at.strftime("%d-%m-%Y") %></p>
+  </div>
+  <% article.paragraphs.each do |para| %>
+    <p> <%=para.content%> </p>
+  <% end %>
+</div>
