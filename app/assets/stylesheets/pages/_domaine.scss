@@ -1,0 +1,58 @@
+.domaine-container {
+  background-color: $white;
+  max-width: 1440px;
+  padding:0;
+  margin: auto;
+  h3 {
+    color: $main-gray;
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 16px;
+  }
+}
+
+.domaine-droit {
+  border: 2px solid #dddddd;
+  text-align: center;
+  background-color: rgba(230, 230, 230, 1);
+  margin: 50px auto;
+  width:80%;
+  // text-align:center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height:400px;
+}
+
+.domaine-droit-reverse {
+  border: 2px solid #dddddd;
+  text-align: center;
+  background-color: rgba(230, 230, 230, 1);
+  width:80%;
+  height:400px;
+  margin: auto;
+  // text-align:center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.domaine-droit-content {
+  width: 35%;
+  margin: 30px;
+}
+
+.domaine-droit-photo {
+  width: 65%;
+  background-position: center;
+  background-size: cover;
+  height:400px;
+}
+
+#last-domaine-droit {
+  margin-bottom: 50px;
+}
+
