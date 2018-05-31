@@ -1,10 +1,20 @@
-<div class="container">
-  <% @articles.each do |article| %>
-    <div class="article">
-      <div class="article-photo" style="background-image: url(<%= article.photo %>)">
+<% if current_page?(articles_path) %>
+  <style>
+    body {
+      background-color: rgba(220, 220, 220, 1);
+    }
+  </style>
+<% end %>
+<div class="article-container">
+  <% @articles.each_with_index do |article, index| %>
+    <% if (index+1).even? %>
+      <div class="article background-white">
+        <%= render 'article', article: article%>
       </div>
-      <h2><%= article.title %></h2>
-      <h4><%= article.subtitle %></h4>
-    </div>
+    <% else %>
+      <div class="article background-gray">
+        <%= render 'article', article: article%>
+      </div>
+    <% end %>
   <% end %>
 </div>
