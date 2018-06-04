@@ -1,15 +1,13 @@
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  max-width: 1440px;
+  height: 500px;
+}
+
 .accueil-container {
   background-color: rgba(220, 220, 220, 1);
   max-width: 1440px;
   padding:0;
   margin: auto;
-}
-
-.accueil-photo {
-  width: 100%;
-  background-position: center;
-  background-size: cover;
-  height:500px;
 }
 
 .accueil-description {

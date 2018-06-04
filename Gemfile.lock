@@ -215,7 +215,7 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
-  bootstrap-sass (~> 3.3)
+  bootstrap-sass (~> 3.3.7)
   carrierwave (~> 1.2)
   cloudinary
   cocoon
@@ -230,7 +230,7 @@ DEPENDENCIES
   puma
   rails (= 5.1.5)
   redis
-  sass-rails
+  sass-rails (>= 3.2)
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
