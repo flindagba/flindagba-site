@@ -13,14 +13,14 @@
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= yield %>
-    <% if current_page?(contact_path) %>
+    <% if current_page?(contacts_path) %>
       <script>
         function initialize() {
           initMap();
           initMap2();
         }
         function initMap() {
-          var bordeaux = {lat: 44.831213, lng: -0.5737014999999701};
+          var bordeaux = {lat: 44.8338921, lng: -0.5875833000000057};
           var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 16,
             center: bordeaux
@@ -31,9 +31,9 @@
           });
         }
         function initMap2() {
-          var uluru2 = {lat: 44.8904092, lng: -0.5037608000000091};
+          var uluru2 = {lat: 44.8932557, lng: -0.501630500000033};
           var map2 = new google.maps.Map(document.getElementById('map2'), {
-            zoom: 15,
+            zoom: 16,
             center: uluru2
           });
           var marker = new google.maps.Marker({
