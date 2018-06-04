@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= favicon_link_tag 'favicon.ico' %>
     <title>Maître F. LINDAGBA MBA</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
@@ -12,10 +13,41 @@
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= yield %>
+    <% if current_page?(contact_path) %>
+      <script>
+        function initialize() {
+          initMap();
+          initMap2();
+        }
+        function initMap() {
+          var bordeaux = {lat: 44.831213, lng: -0.5737014999999701};
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 16,
+            center: bordeaux
+          });
+          var marker = new google.maps.Marker({
+            position: bordeaux,
+            map: map
+          });
+        }
+        function initMap2() {
+          var uluru2 = {lat: 44.8904092, lng: -0.5037608000000091};
+          var map2 = new google.maps.Map(document.getElementById('map2'), {
+            zoom: 15,
+            center: uluru2
+          });
+          var marker = new google.maps.Marker({
+            position: uluru2,
+            map: map2
+          });
+        }
+      </script>
+      <script async defer src=<%= "https://maps.googleapis.com/maps/api/js?key=#{ENV['GOOGLE_MAP']}&callback=initialize" %>>
+      </script>
+    <% end %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
     <%= render 'shared/footer' %>
-    <script async defer src=<%= "https://maps.googleapis.com/maps/api/js?key=#{ENV['GOOGLE_MAP']}&callback=initialize" %>>
-    </script>
+
   </body>
 </html>
