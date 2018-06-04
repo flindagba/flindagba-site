@@ -1,0 +1,31 @@
+#map {
+  width: 90%;
+  height: 500px;
+}
+
+#map2{
+  width: 90%;
+  height: 500px;
+}
+
+.map {
+  text-align: center;
+  h2 {
+    font-size: 35px;
+    margin: 70px 0 30px 0;
+    color: $main-color;
+  }
+  i {
+    margin-top: 20px;
+  }
+}
+
+.display-map {
+  margin: auto;
+}
+
+.email-contact {
+  font-size: 22px;
+  margin: 30px 0 50px 0;
+  text-align:center;
+}

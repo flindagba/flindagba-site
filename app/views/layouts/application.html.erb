@@ -15,5 +15,7 @@
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
     <%= render 'shared/footer' %>
+    <script async defer src=<%= "https://maps.googleapis.com/maps/api/js?key=#{ENV['GOOGLE_MAP']}&callback=initialize" %>>
+    </script>
   </body>
 </html>

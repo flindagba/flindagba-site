@@ -30,3 +30,20 @@ a {
     text-decoration: none;
   }
 }
+
+.emailto {
+  color: #444444;
+  &:hover {
+    color: #444444;
+  }
+  &:focus {
+    color: #444444;
+  }
+  &:visited {
+    color: #444444;
+  }
+  &:active {
+    color: #444444;
+  }
+
+}
