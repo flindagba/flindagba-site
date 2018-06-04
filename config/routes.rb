@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root to: 'pages#accueil'
   get "articles", to: "articles#articles"
   get "domaines-expertise", to: "pages#domaines_expertise"
-  get "contact", to: "pages#contact"
   resources :articles, only: [ :new, :create, :edit, :update, :destroy]
+  resources 'contacts', only: [:new, :create], path_names: { new: '' }
 end

@@ -1,8 +1,18 @@
 Rails.application.configure do
-  config.action_mailer.default_url_options = { host: "http://localhost:3000" }
+    config.action_mailer.default_url_options = { host: "http://localhost:3000" }
   # Verifies that versions and hashed value of the package contents in the project's package.json
-config.webpacker.check_yarn_integrity = true
+  config.webpacker.check_yarn_integrity = true
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+   :address              => "smtp.gmail.com",
+   :port                 => 587,
+   :authentication       => :plain,
+   :user_name            => ENV['GMAIL_ADDRESS'],
+   :password             => ENV['GMAIL_APP_PASSWORD'],
+   :domain               => 'heroku.com',
+   :enable_starttls_auto => true
+  }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
