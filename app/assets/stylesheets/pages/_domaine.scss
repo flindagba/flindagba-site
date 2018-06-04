@@ -14,7 +14,7 @@
 }
 
 .domaine-droit {
-  border: 2px solid #dddddd;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.15),0 1px 0 0 rgba(0,0,0,0.08);
   text-align: center;
   background-color: rgba(230, 230, 230, 1);
   margin: 50px auto;
@@ -27,7 +27,7 @@
 }
 
 .domaine-droit-reverse {
-  border: 2px solid #dddddd;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.15),0 1px 0 0 rgba(0,0,0,0.08);
   text-align: center;
   background-color: rgba(230, 230, 230, 1);
   width:80%;
