@@ -1,6 +1,30 @@
 <div class="accueil-container">
-  <div class="accueil-photo" style="background-image:url(<%= asset_path 'women.jpg' %>)">
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+          <div class="item active">
+            <img src="<%= asset_path 'Francine.png' %>" alt="Francine Lindagbe">
+          </div>
+          <div class="item">
+            <img src="<%= asset_path 'Palais-de-justice.png' %>" alt="Palais de justice Bordeaux">
+          </div>
+          <div class="item">
+            <img src="<%= asset_path 'Place-de-la-bourse.png' %>" alt="Place de la bourse Bordeaux">
+          </div>
+      </div>
+      <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="carousel-control right" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
   </div>
+
   <div class="accueil-description">
     <div class="accueil-description-title">
       <h2>Maître F. LINDAGBA MBA</h2>
