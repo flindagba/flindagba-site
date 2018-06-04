@@ -16,21 +16,25 @@
       <div class="navbar-contact">
         <div class="navbar-contact-item">
           <i class="fas fa-map-marker-alt"></i>
-          <p>116 Cours Aristide Briand, 33000 Bordeaux <br> 22 Avenue de Bordeaux, 33560 Carbon-Blanc</p>
+          <p>105 rue Lecocq 33000 Bordeaux <br> 4 rue Thérèse 33560 Carbon Blanc</p>
         </div>
         <div class="navbar-contact-item">
           <i class="fas fa-mobile-alt"></i>
-          <p>Bordeaux : 05 56 31 44 65 <br> Carbon-Blanc :  05 57 30 86 04</p>
+          <p>Bordeaux : 05 35 54 52 30 <br> Carbon-Blanc :  05 57 30 86 04</p>
         </div>
         <div class="navbar-contact-item">
           <i class="far fa-envelope"></i>
-          <p>lindagba.mba.avocat@gmail.com</p>
+          <a class="emailto" href="mailto:flm.cabinet.avocat@gmail.com">flm.cabinet.avocat@gmail.com</a>
         </div>
       </div>
     </div>
 
   </div>
   <div class="navbar-description-link navbar-item navbar-link">
+    <% if user_signed_in? %>
+      <i class="fas fa-sign-out-alt"></i>
+      <%= link_to "Déconnexion", destroy_user_session_path, :method => :delete, class: 'logout' %>
+    <% end %>
     <%= link_to "ACCUEIL", root_path, class: current_class?(root_path) %>
     <%= link_to "DOMAINES D'EXPERTISE", domaines_expertise_path, class: current_class?(domaines_expertise_path) %>
     <%= link_to "ARTICLES", articles_path, class: current_class?(articles_path)  %>
