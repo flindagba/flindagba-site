@@ -45,5 +45,17 @@ a {
   &:active {
     color: #444444;
   }
+}
 
+.text-justify {
+  text-align: justify;
+}
+
+.text-left {
+  text-align: left;
+  margin: 0 !important;
+}
+
+.text-underline {
+  text-decoration: underline;
 }
