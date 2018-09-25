@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:articles, :new, :edit, :update, :create, :destroy]
+  skip_before_action :authenticate_user!, only: [:articles]
 
   def articles
     @articles = Article.all
