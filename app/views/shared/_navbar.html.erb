@@ -31,14 +31,20 @@
 
   </div>
   <div class="navbar-description-link navbar-item navbar-link">
-    <% if user_signed_in? %>
-      <i class="fas fa-sign-out-alt"></i>
-      <%= link_to "Déconnexion", destroy_user_session_path, :method => :delete, class: 'logout' %>
-    <% end %>
     <%= link_to "ACCUEIL", root_path, class: current_class?(root_path) %>
     <%= link_to "DOMAINES D'EXPERTISE", domaines_expertise_path, class: current_class?(domaines_expertise_path) %>
     <%= link_to "ARTICLES", articles_path, class: current_class?(articles_path)  %>
     <%= link_to "CONTACT", contacts_path, class: current_class?(contacts_path)%>
   </div>
 </div>
+<% if user_signed_in? %>
+  <div class="admin-navbar-container">
+    <div class="admin-link">
+      <%= link_to "DECONNEXION", destroy_user_session_path, :method => :delete %>
+    </div>
+    <div class="admin-link">
+      <%= link_to "AJOUTER UN ARTICLE", new_article_path %>
+    </div>
+  </div>
+<% end %>
 

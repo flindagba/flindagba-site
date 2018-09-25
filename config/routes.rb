@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, skip: [:registrations]
   root to: 'pages#accueil'
   get "articles", to: "articles#articles"
   get "domaines-expertise", to: "pages#domaines_expertise"
