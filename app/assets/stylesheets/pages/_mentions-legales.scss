@@ -1,0 +1,26 @@
+.legal-mentions-container {
+  margin: 20px;
+  h1 {
+    font-size: 33px;
+    font-weight: bold;
+  }
+  a {
+    color: $main-color;
+    text-decoration: underline;
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+.legal-mentions-article {
+  text-align: justify;
+  h2 {
+    font-size: 25px;
+    color: $main-color;
+    text-decoration: underline;
+  }
+  p {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+}
