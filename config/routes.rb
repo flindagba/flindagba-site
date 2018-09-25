@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#accueil'
   get "articles", to: "articles#articles"
   get "domaines-expertise", to: "pages#domaines_expertise"
+  get "mentions-legales", to: "pages#mentions_legales"
   resources :articles, only: [ :new, :create, :edit, :update, :destroy]
   resources 'contacts', only: [:new, :create], path_names: { new: '' }
 end
