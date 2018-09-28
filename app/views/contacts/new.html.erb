@@ -1,37 +1,44 @@
-<div class="container">
-  <div class="row">
-    <div class="map col-md-6">
-      <h2>Cabinet de Bordeaux</h2>
-      <div class="display-map" id="map"></div>
-      <i class="fas fa-map-marker-alt"></i>
-      <p>105 rue Lecocq 33000 Bordeaux</p>
-      <i class="fas fa-mobile-alt"></i>
-      <p>05 35 54 52 30</p>
+<div class="container main-contact-container">
+  <h2>Vous avez besoin d'informations complémentaires ? <br> Contactez moi.</h2>
+  <h3>INFORMATIONS DE CONTACT</h3>
+  <div class="form-container">
+    <%= simple_form_for @contact, html: { class: 'form-horizontal' }, url: new_contact_path do |f| %>
+      <div class="form-inputs">
+        <%= f.input :name, label: 'Nom', required: true, placeholder: 'Nom et prénom', error: "Le nom est obligatoire", error_html: { class: 'input_error'}%>
+        <%= f.input :email, label: 'Email', placeholder: 'email@exemple.fr', required: true, error: "L'email n'est pas valide", error_html: { class: 'input_error'} %>
+        <%= f.input :message, label: 'Votre message', as: :text, required: false, input_html: { rows: 10 }, placeholder: 'Minimum de 15 caractères, maximum de 2000', error: "Minimum 15 caractères, maximum 2000", error_html: { class: 'input_error'} %>
+      </div>
+      <div class="form-actions">
+        <%= f.button :submit, 'Envoyer', class: "btn button-submit"%>
+      </div>
+    <% end %>
+  </div>
+  <hr>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="map col-md-6">
+        <h2>Cabinet de Bordeaux</h2>
+        <div class="display-map" id="map"></div>
+        <i class="fas fa-map-marker-alt"></i>
+        <p>105 rue Lecocq 33000 Bordeaux</p>
+        <i class="fas fa-mobile-alt"></i>
+        <p>05 35 54 52 30</p>
+      </div>
+      <div class="map col-md-6">
+        <h2>Cabinet de Carbon-Blanc</h2>
+        <div class="display-map" id="map2"></div>
+        <i class="fas fa-map-marker-alt"></i>
+        <p>4 rue Thérèse 33560 Carbon Blanc</p>
+        <i class="fas fa-mobile-alt"></i>
+        <p>05 57 30 86 04</p>
+      </div>
     </div>
-    <div class="map col-md-6">
-      <h2>Cabinet de Carbon-Blanc</h2>
-      <div class="display-map" id="map2"></div>
-      <i class="fas fa-map-marker-alt"></i>
-      <p>4 rue Thérèse 33560 Carbon Blanc</p>
-      <i class="fas fa-mobile-alt"></i>
-      <p>05 57 30 86 04</p>
+    <div class="email-contact">
+      <i class="far fa-envelope"></i>
+      <a class="emailto" href="mailto:flm.cabinet.avocat@gmail.com">flm.cabinet.avocat@gmail.com</a>
     </div>
   </div>
-  <div class="email-contact">
-    <i class="far fa-envelope"></i>
-    <a class="emailto" href="mailto:flm.cabinet.avocat@gmail.com">flm.cabinet.avocat@gmail.com</a>
-  </div>
+
 </div>
 
-<div class="form-container">
-  <%= simple_form_for @contact, html: { class: 'form-horizontal' }, url: new_contact_path do |f| %>
-    <div class="form-inputs">
-      <%= f.input :name, label: 'Nom', required: true, placeholder: 'Nom et prénom', error: "Le nom est obligatoire", error_html: { class: 'input_error'}%>
-      <%= f.input :email, label: 'Email', required: true, error: "L'email n'est pas valide", error_html: { class: 'input_error'} %>
-      <%= f.input :message, label: 'Votre message', as: :text, required: false, input_html: { rows: 10 }, placeholder: 'Décrivez moi votre projet', error: "Minimum 15 caractères, maximum 2000", error_html: { class: 'input_error'} %>
-    </div>
-    <div class="form-actions">
-      <%= f.button :submit, 'Envoyer', class: "btn button-submit"%>
-    </div>
-  <% end %>
-</div>
+
