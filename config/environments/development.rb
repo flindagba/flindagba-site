@@ -10,7 +10,7 @@ Rails.application.configure do
    :authentication       => :plain,
    :user_name            => ENV['GMAIL_ADDRESS'],
    :password             => ENV['GMAIL_APP_PASSWORD'],
-   :domain               => 'heroku.com',
+   :domain               => 'francine-lindagba-avocat.com',
    :enable_starttls_auto => true
   }
   # Settings specified here will take precedence over those in config/application.rb.
