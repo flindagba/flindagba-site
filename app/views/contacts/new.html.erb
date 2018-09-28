@@ -1,5 +1,6 @@
-<div class="container">
-
+<div class="container main-contact-container">
+  <h2>Vous avez besoin d'informations complémentaires ? <br> Contactez moi.</h2>
+  <h3>INFORMATIONS DE CONTACT</h3>
   <div class="form-container">
     <%= simple_form_for @contact, html: { class: 'form-horizontal' }, url: new_contact_path do |f| %>
       <div class="form-inputs">
@@ -12,8 +13,8 @@
       </div>
     <% end %>
   </div>
-
-  <div class="container">
+  <hr>
+  <div class="container-fluid">
     <div class="row">
       <div class="map col-md-6">
         <h2>Cabinet de Bordeaux</h2>
