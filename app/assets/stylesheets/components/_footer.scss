@@ -38,6 +38,14 @@
     margin: 0;
     padding-bottom: 10px;
   }
+  a {
+    color: #111111;
+    text-decoration: none;
+    &:hover {
+      color: $light-gray;
+      text-decoration: none;
+    }
+  }
 }
 
 .link-legal-mentions {
