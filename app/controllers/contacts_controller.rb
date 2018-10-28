@@ -10,7 +10,7 @@ class ContactsController < ApplicationController
     if @contact.deliver
       flash.now[:error] = nil
       sleep 1
-      flash[:notice] = 'Merci pour votre message!'
+      flash[:notice] = 'Merci pour votre réservation'
       redirect_to root_path
     else
       flash.now[:error] = "Désolé nous n'avons pas pu envoyer le mail"
