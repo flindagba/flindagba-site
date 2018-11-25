@@ -1,15 +1,28 @@
 Rails.application.configure do
-  config.action_mailer.default_url_options = { host: "https://www.francine-lindagba-avocat.herokuapp.com/" }
+  # config.action_mailer.default_url_options = { host: "https://www.francine-lindagba-avocat.herokuapp.com/" }
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #  :address              => "smtp.gmail.com",
+  #  :port                 => 587,
+  #  :authentication       => :plain,
+  #  :user_name            => ENV['GMAIL_ADDRESS'],
+  #  :password             => ENV['GMAIL_APP_PASSWORD'],
+  #  :domain               => 'francine-lindagba-avocat.com',
+  #  :enable_starttls_auto => true
+  # }
+
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-   :address              => "smtp.gmail.com",
+   :address              => "smtp.live.com",
    :port                 => 587,
-   :authentication       => :plain,
-   :user_name            => ENV['GMAIL_ADDRESS'],
-   :password             => ENV['GMAIL_APP_PASSWORD'],
+   :enable_starttls_auto => true,
+   :user_name            => ENV['OUTLOOK_ADDRESS'],
+   :password             => ENV['OUTLOOK_PASSWORD'],
    :domain               => 'francine-lindagba-avocat.com',
-   :enable_starttls_auto => true
-  }
+   :authentication       => 'plain'
+ }
 
   # Verifies that versions and hashed value of the package contents in the project's package.json
   config.webpacker.check_yarn_integrity = false
