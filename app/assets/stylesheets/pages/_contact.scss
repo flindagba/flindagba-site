@@ -64,9 +64,12 @@ textarea.form-control {
   display: none;
 }
 
-.input_error {
-  color: red;
-  font-size: 15px;
+.invalid-feedback {
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  padding-left: 10px;
+  background-color:#f6241d;
+  font-size: 20px;
   font-weight: lighter;
 }
 
