@@ -78,8 +78,8 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-# production:
- # <<: *default
- # database: flindagba-site_production
- # username: flindagba-site
- # password: <%= ENV['FLINDAGBA-SITE_DATABASE_PASSWORD'] %>
+ production:
+  <<: *default
+ database:# flindagba-site_production
+ username: # flindagba-site
+  password:# <%= ENV['FLINDAGBA-SITE_DATABASE_PASSWORD'] %>
